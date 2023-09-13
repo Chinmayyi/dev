@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        #text{
+            font-size: 1pt;
+            color: red;
+            animation: grow-shrink 5s linear infinite alternate;
+        }
+        @keyframes grow-shrink{
+            0%{
+                font-size:1pt;
+                color:red;
+                content:TEXT-GROWING;
+            }
+            100%{
+                font-size:50pt;
+                color:blue;
+                content:TEXT-SHRINKING;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="text">TEXT-GROWING</div>
+</body>
