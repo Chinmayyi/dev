@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <title>Binary Search</title>
+    <script type="text/javascript">
+        function binary() {
+            var n = parseInt(prompt("Enter number of elements"));
+            var a = new Array(n);
+            var p = 0;
+            
+            for ( i = 0; i < a.length; i++) {
+                a[i] = parseInt(prompt("Enter element " + (i + 1)));
+            }
+            
+            var key = parseInt(prompt("Enter the key to search for"));
+            var low = 0;
+            var high = a.length - 1;
+            
+            
+            while (low <= high) {
+                var mid = parseInt((low + high) / 2);
+                
+                if (key == a[mid]) {
+                    p = 1;
+                    break;
+                } else if (key < a[mid]) {
+                    high = mid - 1;
+                } else {
+                    low = mid + 1;
+                }
+            }
+            
+            if (p == 1) {
+                document.writeln("The key is found at position " + (mid + 1));
+            } else {
+                document.writeln("The key is not found.");
+            }
+        }
+    </script>
+</head>
+<body onload="binary();">
+</body>
+</html>
